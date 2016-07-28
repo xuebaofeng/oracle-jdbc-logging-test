@@ -12,12 +12,12 @@ public class App {
     
     
     Connection con = DriverManager.getConnection(
-        "jdbc:oracle:thin:@localhost:1521:XE",
-        "system",
-        "welcome");
+        "jdbc:oracle:thin:@localhost:1521:",
+        "",
+        "");
     
     Statement stmt = con.createStatement();
-    stmt.executeQuery("SELECT TOPIC FROM HELP");
+    stmt.executeQuery("SELECT  FROM ");
     
   }
 }
