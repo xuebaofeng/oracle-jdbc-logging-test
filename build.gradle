@@ -1,0 +1,18 @@
+group 'bf.test'
+version '1.0'
+
+apply plugin: 'java'
+apply plugin: 'idea'
+
+sourceCompatibility = 1.7
+compileJava.options.encoding = 'UTF-8'
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    runtime fileTree(include: ['*.jar'], dir: 'lib')
+}
