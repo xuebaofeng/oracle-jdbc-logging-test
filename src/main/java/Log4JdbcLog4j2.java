@@ -1,5 +1,3 @@
-package bf;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -8,12 +6,12 @@ import java.sql.SQLException;
 /**
  * @author Baofeng(Shawn) Xue 8/4/16.
  */
-public class Log4Jdbc {
+public class Log4JdbcLog4j2 {
   
   public static void main(String[] args) throws SQLException, ClassNotFoundException {
     
     
-    Class.forName("net.sf.log4jdbc.DriverSpy");
+    Class.forName("net.sf.log4jdbc.sql.jdbcapi.DriverSpy");
     Connection con = DriverManager.getConnection(
         "jdbc:log4jdbc:oracle:thin:@localhost:1521:XE",
         "system",
