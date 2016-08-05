@@ -1,7 +1,4 @@
 # oracle-jdbc-logging-test
 
 
-jvm options:   
-
--Doracle.jdbc.Trace=true   
--Djava.util.logging.config.file=jdbc-logging.properties
+example of oracle jdbc sql logging by JUL and log4jdbc-log4j2
