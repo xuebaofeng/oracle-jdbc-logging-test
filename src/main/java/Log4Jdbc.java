@@ -15,13 +15,12 @@ public class Log4Jdbc {
   
   public static void main(String[] args) throws SQLException, ClassNotFoundException {
   
-    Properties properties = new Properties();
-    properties.put("user","system");
-    properties.put("password","welcome");
+
     Class.forName("net.sf.log4jdbc.DriverSpy");
     Connection con = DriverManager.getConnection(
         "jdbc:log4jdbc:oracle:thin:@localhost:1521:XE",
-        properties);
+        "system",
+        "");
   
     Statement stmt = con.createStatement();
     stmt.executeQuery("SELECT TOPIC FROM HELP");

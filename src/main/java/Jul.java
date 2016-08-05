@@ -18,7 +18,7 @@ public class Jul {
     Connection con = DriverManager.getConnection(
         "jdbc:oracle:thin:@localhost:1521:XE",
         "system",
-        "welcome");
+        "");
     
     Statement stmt = con.createStatement();
     stmt.executeQuery("SELECT TOPIC FROM HELP");
