@@ -19,3 +19,11 @@ dependencies {
 
     runtime fileTree(include: ['*.jar'], dir: 'lib')
 }
+
+task copyToLib(type: Copy) {
+    into "$buildDir"
+    from configurations.runtime
+}
+
+build.dependsOn(copyToLib)
+
