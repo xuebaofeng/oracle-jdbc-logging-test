@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<configuration debug="true" scan="true" scanPeriod="30 seconds" packagingData="true">
-
-    <jmxConfigurator/>
-
-    <contextListener class="ch.qos.logback.classic.jul.LevelChangePropagator">
-        <resetJUL>true</resetJUL>
-    </contextListener>
+<configuration>
 
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <!-- encoders are assigned the type
@@ -19,6 +13,10 @@
         <appender-ref ref="STDOUT"/>
     </appender>
 
+    <logger name="jdbc.sqltiming" level="trace"/>
+    <logger name="jdbc.sqlonly" level="info"/>
+    <logger name="jdbc.audit" level="info"/>
+    <logger name="jdbc.resultset" level="trace"/>
     <logger name="jdbc" level="trace"/>
 
     <root level="warn">
