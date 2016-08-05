@@ -10,9 +10,12 @@ compileJava.options.encoding = 'UTF-8'
 repositories {
     mavenLocal()
     mavenCentral()
-    jcenter()
 }
 
 dependencies {
+    compile group: 'com.googlecode.log4jdbc', name: 'log4jdbc', version: '1.2'
+
+    compile 'ch.qos.logback:logback-classic:+'
+
     runtime fileTree(include: ['*.jar'], dir: 'lib')
 }
