@@ -1,7 +1,7 @@
 # oracle-jdbc-logging-test
 
 
-vm options:   
+jvm options:   
 
 -Doracle.jdbc.Trace=true   
 -Djava.util.logging.config.file=myConfig.properties  
